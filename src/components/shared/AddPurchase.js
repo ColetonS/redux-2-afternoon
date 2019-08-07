@@ -15,7 +15,7 @@ class AddPurchase extends Component {
     alert('Missing prop "addPurchase" in Chart2 component')
   }
 
-  add() {
+  add = () => {
     let { price, category, description } = this.state;
     let { addPurchase } = this.props;
     if (!addPurchase) addPurchase = () => alert("Missing prop: addPurchase (AddPurchase.js)")
@@ -73,7 +73,7 @@ class AddPurchase extends Component {
             </div>
             <button
               className='btn btn-success btn-lg'
-              onClick={() => this.add()}>Add</button>
+              onClick={this.add}>Add</button>
           </section>
         </div>
       </div>
